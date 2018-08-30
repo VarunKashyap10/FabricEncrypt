@@ -1,0 +1,225 @@
+[32minfo[39m: [TestUtil]: 
+
+*******************************************************************************
+*******************************************************************************
+*                                          
+* Using temp dir: /tmp/hfc
+*                                          
+*******************************************************************************
+*******************************************************************************
+
+TAP version 13
+# 
+
+***** SDK Built config update  create flow  *****
+
+
+ok 1 Successfully retrieved TLS certificate
+ok 2 Successfull extracted the config update from the configtx envelope
+ok 3 Successfully enrolled user 'admin' for org1
+ok 4 Successfully signed config update
+ok 5 Successfully enrolled user 'admin' for org2
+ok 6 Successfully signed config update
+ok 7 Successfully enrolled user 'admin' for orderer
+ok 8 Successfully failed with max error on the create channel: Error: 8 RESOURCE_EXHAUSTED: Sent message larger than max (3193 vs. 1000)
+ok 9 Successfully received the configuration
+ok 10 Successfully created the channel.
+ok 11 Successfully waited to make sure new channel was created.
+# 
+
+***** End-to-end flow: join channel *****
+
+
+ok 12 Successfully retrieved TLS certificate
+ok 13 Successfully enrolled orderer 'admin' (joined_channel 1)
+ok 14 Successfully got the genesis block
+ok 15 Successfully enrolled org (join_channel):org1 'admin'
+ok 16 Successfully joined peers in organization peerOrg1 to join the channel
+ok 17 Successfully joined peers in organization "peerOrg1" to the channel
+ok 18 Successfully retrieved TLS certificate
+ok 19 Successfully enrolled orderer 'admin' (joined_channel 1)
+ok 20 Successfully got the genesis block
+ok 21 Successfully enrolled org (join_channel):org2 'admin'
+ok 22 Successfully joined peers in organization peerOrg2 to join the channel
+ok 23 Successfully joined peers in organization "peerOrg2" to the channel
+# 
+
+***** End-to-end flow: chaincode install *****
+
+
+ok 24 Successfully retrieved TLS certificate
+ok 25 Successfully loaded member from persistence
+ok 26 Successfully enrolled user 'admin' (e2eUtil 1)
+[32minfo[39m: [packager/Golang.js]: packaging GOLANG from github.com/example_cc
+ok 27 Error: Failed to send install Proposal or receive valid response: [object Object] at e2eUtils.tlsEnroll.then.then.then.then (/home/varun/Desktop/electron-quick-start/fabric-sdk-node/test/integration/e2e/e2eUtils.js:173:10) at <anonymous>
+ok 28 Successfully retrieved TLS certificate
+ok 29 Successfully loaded member from persistence
+ok 30 Successfully enrolled user 'admin' (e2eUtil 1)
+[32minfo[39m: [packager/Golang.js]: packaging GOLANG from github.com/example_cc
+ok 31 Error: Failed to send install Proposal or receive valid response: [object Object] at e2eUtils.tlsEnroll.then.then.then.then (/home/varun/Desktop/electron-quick-start/fabric-sdk-node/test/integration/e2e/e2eUtils.js:173:10) at <anonymous>
+# 
+
+***** End-to-end flow: chaincode install *****
+
+
+ok 32 Successfully retrieved TLS certificate
+ok 33 Successfully enrolled user 'admin' (e2eUtil 1)
+[32minfo[39m: [packager/Golang.js]: packaging GOLANG from github.com/example_cc
+[32minfo[39m: [E2E testing]: install proposal was good
+ok 34 Successfully sent install Proposal and received ProposalResponse: Status - 200
+ok 35 Successfully installed chaincode in peers of organization "org1"
+ok 36 Successfully retrieved TLS certificate
+ok 37 Successfully enrolled user 'admin' (e2eUtil 1)
+[32minfo[39m: [packager/Golang.js]: packaging GOLANG from github.com/example_cc
+[32minfo[39m: [E2E testing]: install proposal was good
+ok 38 Successfully sent install Proposal and received ProposalResponse: Status - 200
+ok 39 Successfully installed chaincode in peers of organization "org2"
+# 
+
+***** End-to-end flow: instantiate chaincode *****
+
+
+ok 40 Successfully retrieved TLS certificate
+ok 41 Successfully enrolled user 'admin' (e2eUtil 2)
+[32minfo[39m: [E2E testing]: instantiate proposal was good
+[32minfo[39m: [E2E testing]: instantiate proposal was good
+ok 42 Successfully sent Proposal and received ProposalResponse
+ok 43 The chaincode instantiate transaction has been committed on peer localhost:7053
+ok 44 The chaincode instantiate transaction was valid.
+ok 45 Successfully sent instantiatetransaction to the orderer.
+ok 46 Successfully instantiated chaincode on the channel
+# 
+
+***** End-to-end flow: invoke transaction to move money *****
+
+
+ok 47 Successfully retrieved TLS certificate
+ok 48 Successfully enrolled user 'admin'
+ok 49 Successfully enrolled user 'admin' (e2eUtil 3)
+# *****************************************************************************
+# stop and start the peer event hub ---- N  O  W ----- you have 0 millis Thu Aug 30 2018 08:55:00 GMT+0530 (IST)
+# *****************************************************************************
+ok 50 transaction proposal has response status of good
+ok 51 transaction proposal signature and endorser are valid
+ok 52 transaction proposal payloads are valid
+ok 53 transaction proposal has response status of good
+ok 54 transaction proposal signature and endorser are valid
+ok 55 transaction proposal payloads are valid
+ok 56 compareProposalResponseResults exection did not throw an error
+ok 57  All proposals have a matching read/writes sets
+ok 58 Successfully sent Proposal and received ProposalResponse
+ok 59 The balance transfer transaction has been committed on peer localhost:8053
+ok 60 Successfully sent transaction to the orderer.
+# ******************************************************************
+# To manually run /test/integration/query.js, set the following environment variables:
+# export E2E_TX_ID='33307b0aa2adf41c285da9de1f039bce91abb48356ae72ac4c1e8f3ead7a34c6'
+# ******************************************************************
+[32minfo[39m: [Channel.js]: close - closing connections
+[32minfo[39m: [Peer.js]: close - closing peer connection localhost:7051
+[32minfo[39m: [Peer.js]: close - closing peer connection localhost:8051
+[32minfo[39m: [Orderer.js]: close - closing orderer connection localhost:7050
+ok 61 Successfully closed all connections
+ok 62 Successfully invoke transaction chaincode on channel
+# 
+
+***** End-to-end flow: query chaincode *****
+
+
+ok 63 Successfully retrieved TLS certificate
+ok 64 Successfully loaded member from persistence
+ok 65 Successfully enrolled user 'admin' (e2eUtil 4)
+ok 66 checking query results are correct that user b has 300 now after the move
+ok 67 checking query results are correct that user b has 300 now after the move
+ok 68 Successfully query chaincode on the channel
+# 
+
+***** U P G R A D E flow: chaincode install *****
+
+
+ok 69 Successfully retrieved TLS certificate
+ok 70 Successfully enrolled user 'admin' (e2eUtil 1)
+[32minfo[39m: [packager/Golang.js]: packaging GOLANG from github.com/example_cc1
+[32minfo[39m: [E2E testing]: install proposal was good
+ok 71 Successfully sent install Proposal and received ProposalResponse: Status - 200
+ok 72 Successfully installed chaincode in peers of organization "org1"
+ok 73 Successfully retrieved TLS certificate
+ok 74 Successfully enrolled user 'admin' (e2eUtil 1)
+[32minfo[39m: [packager/Golang.js]: packaging GOLANG from github.com/example_cc1
+[32minfo[39m: [E2E testing]: install proposal was good
+ok 75 Successfully sent install Proposal and received ProposalResponse: Status - 200
+ok 76 Successfully installed chaincode in peers of organization "org2"
+# 
+
+***** U P G R A D E flow: upgrade chaincode *****
+
+
+ok 77 Successfully retrieved TLS certificate
+ok 78 Successfully enrolled user 'admin' (e2eUtil 2)
+[32minfo[39m: [E2E testing]: upgrade proposal was good
+[32minfo[39m: [E2E testing]: upgrade proposal was good
+ok 79 Successfully sent Proposal and received ProposalResponse
+ok 80 The chaincode upgrade transaction has been committed on peer localhost:7053
+ok 81 The chaincode upgrade transaction was valid.
+ok 82 Successfully sent upgradetransaction to the orderer.
+ok 83 Successfully upgrade chaincode on the channel
+# 
+
+***** U P G R A D E flow: invoke transaction to move money *****
+
+
+ok 84 Successfully retrieved TLS certificate
+ok 85 Successfully enrolled user 'admin'
+ok 86 Successfully enrolled user 'admin' (e2eUtil 3)
+# *****************************************************************************
+# stop and start the peer event hub ---- N  O  W ----- you have 0 millis Thu Aug 30 2018 08:55:17 GMT+0530 (IST)
+# *****************************************************************************
+ok 87 transaction proposal has response status of good
+ok 88 transaction proposal signature and endorser are valid
+ok 89 transaction proposal payloads are valid
+ok 90 transaction proposal has response status of good
+ok 91 transaction proposal signature and endorser are valid
+ok 92 transaction proposal payloads are valid
+ok 93 compareProposalResponseResults exection did not throw an error
+ok 94  All proposals have a matching read/writes sets
+ok 95 Successfully sent Proposal and received ProposalResponse
+ok 96 The balance transfer transaction has been committed on peer localhost:8053
+ok 97 Successfully sent transaction to the orderer.
+# ******************************************************************
+# To manually run /test/integration/query.js, set the following environment variables:
+# export E2E_TX_ID='7af8d9a16efb8ff93b7b780bfdc6fe4aec128cd6110b0a7fdb2357df0b198760'
+# ******************************************************************
+[32minfo[39m: [Channel.js]: close - closing connections
+[32minfo[39m: [Peer.js]: close - closing peer connection localhost:7051
+[32minfo[39m: [Peer.js]: close - closing peer connection localhost:8051
+[32minfo[39m: [Orderer.js]: close - closing orderer connection localhost:7050
+ok 98 Successfully closed all connections
+ok 99 Successfully invoke transaction chaincode on the channel
+# 
+
+***** U P G R A D E flow: query chaincode *****
+
+
+ok 100 Successfully retrieved TLS certificate
+ok 101 Successfully loaded member from persistence
+ok 102 Successfully enrolled user 'admin' (e2eUtil 4)
+ok 103 checking query results are correct that user b has 410 now after the move
+ok 104 checking query results are correct that user b has 410 now after the move
+ok 105 Successfully query chaincode on the channel
+# 
+
+***** TransientMap Support in Proposals *****
+
+
+ok 106 Successfully retrieved TLS certificate
+ok 107 Successfully loaded member from persistence
+ok 108 Successfully enrolled user 'admin' (e2eUtil 4)
+ok 109 Checking the result has the transientMap value returned by the chaincode
+ok 110 Checking the result has the transientMap value returned by the chaincode
+ok 111 Successfully verified transient map values
+
+1..111
+# tests 111
+# pass  111
+
+# ok
+

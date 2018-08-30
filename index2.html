@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>8thSemProject- VarunKashyap</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="./assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="./assets/css/main.css" />
+		<link rel="stylesheet" href="./assets/css/extraModal.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="./assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="./assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Introduction</a></li>
+							<li><a href="#one">Start first network</a></li>
+							<li><a href="#two">Controls</a></li>
+							<li><a href="#three">View CouchDB</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Hyperledger Fabric and Cryptography</h1>
+							<p>Hyperledger creates and manages the docker containers required for the blockchain network<br />
+							Node Webkit creates a UI using HTML code and runs the node APIs for hyperledger.</p>
+							<ul class="actions">
+								
+								<li><a class="button scrolly" id="FabricWindow" href="https://hyperledger-fabric.readthedocs.io/en/release-1.2/">Hyperledger Fabric</a></li>
+							</ul>
+							<h3>Default Settings ----></h3>
+							<p>The network topology consists of 4 peer nodes and 1 ordering node.<br> The peer nodes are divided into 2 peer organizations.</p>
+							<ul class="actions">
+								
+								<li><a  href="#one" id="startNetwork" class="button scrolly" >Start First Network</a></li>
+
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<div class="content">
+								<div class="inner">
+									<h2>Network is started.</h2>
+									<p>Docker is started and 4 peer containers are initialized</p>
+									<ul class="actions">
+										<li><a href="#" class="button">Learn more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<div class="inner">
+									<h2>CryptoSuite Settings</h2>
+									<p>Test different CryptoSuite settings with a test string </p>
+									<div>
+										<form method="post" action="#">
+											<div class="row uniform">
+												<div class="6u 12u$(xsmall)">
+													<input type="text" name="testString" id="sample-string" value="abcdefg" placeholder="Sample String">
+												</div>
+												<div class="12u$">
+													<div class="select-wrapper">
+														<select name="demo-category" id="demo-category">
+															<option value="#">-Encryption System Options-</option>
+															<option value="ecdsa">ECDSA </option>
+														</select>
+													</div>
+												</div>
+												<div class="12u$">
+													<div class="select-wrapper">
+														<select name="demo-category" id="key-category">
+															<option value="256">256</option>
+															<option value="384">384</option>
+														</select>
+													</div>
+												</div>
+												<div class="12u$">
+													<div class="select-wrapper">
+														<select name="demo-category" id="hash-category">
+															<option value="#">-Hashing Options-</option>
+															<option value="sha2">SHA2</option>
+															<option value="sha3">SHA3</option>
+															<option value="blake">Blake</option>
+															<option value="whirlpool">Whirlpool</option>
+															<option value="ripemd">RipeMD</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+									<ul class="actions">
+										<li><a id="custom-cryptosuite"  class="button"> Test CryptoSuite</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Control the Fabric</h2>
+							<p>Custom controls allow - adding peers, checking for alive docker containers, querying against peer, seting env to a peer, etc.</p>
+							<div class="features">
+								<section>
+									<span class="icon major fa-code"></span>
+                                    <h3>Docker Info</h3>
+                                    <p>View active docker conatainers.</p>
+                                    <p>View active networks.</p>
+									<button id="dockerView" >View Docker State</button>
+								</section>
+								<section>
+									<span class="icon major fa-lock"></span>
+									<h3>Make Transactions</h3>
+                                    <p>Transfer from PeerA to PeerB</p>
+                                    <p>Transfer sample amount of 100.</p>
+                                    <input type="text" id="transfer1Value" placeholder='100'>
+									<button id="transfer1Button">Transfer</button>
+								</section>
+								<section>
+									<span class="icon major fa-cog"></span>
+									<h3>Make Transactions</h3>
+                                    <p>Transfer Value from PeerB to PeerA</p>
+                                    <p>Sample amount of 100.</p>
+                                    <input type="text" id="transfer2Value" placeholder="100">
+                                    <button id="transfer2Button">Transfer</button>
+								</section>
+								<section>
+									<span class="icon major fa-desktop"></span>
+									<h3>Query Peers</h3>
+                                    <p>View peer's balance</p>
+                                    <button id="queryButton">Query</button>
+								</section>
+								<section>
+									<span class="icon major fa-chain"></span>
+									<h3>Add peer</h3>
+                                    <p> Add a peer to network.</p>
+                                    <button id="peerButton">Add</button>
+								</section>
+								<section>
+									<span class="icon major fa-diamond"></span>
+									<h3>Transfer</h3>
+                                    <p>Transfer to new peer.</p>
+                                    <button id="transfer3Button">Transfer</button>
+								</section>
+								<section>
+									<span class="icon major fa-diamond"></span>
+									<h3>Refresh Docker</h3>
+                                    <p>Clean docker networks and containers</p>
+                                    <button id="refreshButton">Refresh</button>
+								</section>
+							</div>
+						</div>
+					</section>
+                    <section id="three">
+						<div >
+								<iframe id='iframe' height="800px" width='100%'  src = 'http://127.0.0.1:5984/_utils' allowfullscreen> </iframe>
+						</div>
+                            </section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+		
+			<script src="./businessLogic/dockerFunctions.js"></script>
+        <!-- 	<script src="./assets/js/jquery.min.js"></script>
+			<script src="./assets/js/jquery.scrollex.min.js"></script>
+			<script src="./assets/js/jquery.scrolly.min.js"></script>
+			<script src="./assets/js/skel.min.js"></script>
+			<script src="./assets/js/util.js"></script>
+            <script src="./assets/js/main.js"></script> -->
+			<!--[if lte IE 8]><script src="./assets/js/ie/respond.min.js"></script><![endif]-->
+
+
+
+	</body>
+</html>

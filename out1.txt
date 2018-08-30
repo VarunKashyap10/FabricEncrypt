@@ -1,0 +1,6 @@
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+local
+c9bdaa21a472        composer_default    bridge              local
+4c792eb56bb8        host                host                local
+3507dc86c04d        none                null                local
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES

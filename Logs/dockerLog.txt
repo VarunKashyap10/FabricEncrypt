@@ -1,0 +1,14 @@
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                                            NAMES
+d548519e3b0a        hyperledger/fabric-peer      "peer node start"        43 seconds ago      Up 37 seconds       0.0.0.0:7051->7051/tcp, 0.0.0.0:7053->7053/tcp   peer0.org1.example.com
+140c0ac13ccc        hyperledger/fabric-peer      "peer node start"        43 seconds ago      Up 38 seconds       0.0.0.0:8051->7051/tcp, 0.0.0.0:8053->7053/tcp   peer0.org2.example.com
+6af9e7b24b8f        hyperledger/fabric-ca        "sh -c 'fabric-ca-se…"   49 seconds ago      Up 43 seconds       0.0.0.0:7054->7054/tcp                           ca_peerOrg1
+72d5d03bcfdf        hyperledger/fabric-orderer   "orderer"                49 seconds ago      Up 43 seconds       0.0.0.0:7050->7050/tcp                           orderer.example.com
+eb14caf4a174        hyperledger/fabric-ca        "sh -c 'fabric-ca-se…"   49 seconds ago      Up 44 seconds       0.0.0.0:8054->7054/tcp                           ca_peerOrg2
+f963df65931e        hyperledger/fabric-couchdb   "tini -- /docker-ent…"   49 seconds ago      Up 45 seconds       4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp       couchdb
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                                            NAMES
+d548519e3b0a        hyperledger/fabric-peer      "peer node start"        43 seconds ago      Up 37 seconds       0.0.0.0:7051->7051/tcp, 0.0.0.0:7053->7053/tcp   peer0.org1.example.com
+140c0ac13ccc        hyperledger/fabric-peer      "peer node start"        43 seconds ago      Up 38 seconds       0.0.0.0:8051->7051/tcp, 0.0.0.0:8053->7053/tcp   peer0.org2.example.com
+6af9e7b24b8f        hyperledger/fabric-ca        "sh -c 'fabric-ca-se…"   49 seconds ago      Up 43 seconds       0.0.0.0:7054->7054/tcp                           ca_peerOrg1
+72d5d03bcfdf        hyperledger/fabric-orderer   "orderer"                49 seconds ago      Up 43 seconds       0.0.0.0:7050->7050/tcp                           orderer.example.com
+eb14caf4a174        hyperledger/fabric-ca        "sh -c 'fabric-ca-se…"   49 seconds ago      Up 44 seconds       0.0.0.0:8054->7054/tcp                           ca_peerOrg2
+f963df65931e        hyperledger/fabric-couchdb   "tini -- /docker-ent…"   49 seconds ago      Up 45 seconds       4369/tcp, 9100/tcp, 0.0.0.0:5984->5984/tcp       couchdb

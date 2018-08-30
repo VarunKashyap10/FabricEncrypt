@@ -1,0 +1,50 @@
+[32minfo[39m: [TestUtil]: 
+
+*******************************************************************************
+*******************************************************************************
+*                                          
+* Using temp dir: /tmp/hfc
+*                                          
+*******************************************************************************
+*******************************************************************************
+
+TAP version 13
+# 
+
+***** End-to-end flow: invoke transaction to move money *****
+
+
+ok 1 Successfully retrieved TLS certificate
+ok 2 Successfully enrolled user 'admin'
+ok 3 Successfully enrolled user 'admin' (e2eUtil 3)
+# *****************************************************************************
+# stop and start the peer event hub ---- N  O  W ----- you have 0 millis Thu Aug 30 2018 08:57:52 GMT+0530 (IST)
+# *****************************************************************************
+ok 4 transaction proposal has response status of good
+ok 5 transaction proposal signature and endorser are valid
+ok 6 transaction proposal payloads are valid
+ok 7 transaction proposal has response status of good
+ok 8 transaction proposal signature and endorser are valid
+ok 9 transaction proposal payloads are valid
+ok 10 compareProposalResponseResults exection did not throw an error
+ok 11  All proposals have a matching read/writes sets
+ok 12 Successfully sent Proposal and received ProposalResponse
+ok 13 The balance transfer transaction has been committed on peer localhost:8053
+ok 14 Successfully sent transaction to the orderer.
+# ******************************************************************
+# To manually run /test/integration/query.js, set the following environment variables:
+# export E2E_TX_ID='ace317029b89138ab97b363db5daaa723f3f6d04c574c2368389807d51088616'
+# ******************************************************************
+[32minfo[39m: [Channel.js]: close - closing connections
+[32minfo[39m: [Peer.js]: close - closing peer connection localhost:7051
+[32minfo[39m: [Peer.js]: close - closing peer connection localhost:8051
+[32minfo[39m: [Orderer.js]: close - closing orderer connection localhost:7050
+ok 15 Successfully closed all connections
+ok 16 Successfully invoke transaction chaincode on channel
+
+1..16
+# tests 16
+# pass  16
+
+# ok
+

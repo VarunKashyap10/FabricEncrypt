@@ -1,0 +1,13 @@
+<html>
+<head>
+<script>
+function readfile() {
+    alert(document.getElementById('iframe').contentDocument.body.firstChild.innerHTML);
+}
+</script>
+</head>
+<body>
+<iframe id='iframe' src = 'out1.txt' onload='readfile()' allowfullscreen> </iframe>
+
+</body>
+</html>
